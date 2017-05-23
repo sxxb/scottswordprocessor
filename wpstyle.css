@@ -1,0 +1,83 @@
+/** WP CSS **/
+body {
+	background-color: #403e37;
+	font-family:arial;
+}
+
+#everything {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 100%;
+}
+
+h1 {
+	  margin-top: 20px;
+   	margin-bottom: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #71dad7;
+    border-radius: 5px;
+    background-color: #71dad7;
+  	padding: 20px;
+  	width: 96%;
+    text-align: left;
+    color: #403e37;
+}
+
+h2 {
+	float: right;
+  padding-right: 10px;
+	text-align:right;
+	cursor: default;
+}
+
+button {
+	background-color: #ff7759;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ff7759;
+    border-radius: 5px;
+    color: #403e37;
+    padding: 16px 32px;
+    width: 24.6%;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #dd5537;
+	border-style: solid;
+  border-width: 1px;
+  border-color: #dd5537;
+  border-radius: 5px;
+  color: #403e37;
+}
+
+button:active {
+  background-color: #dd5537;
+	border-style: solid;
+  border-width: 1px;
+  border-color: #dd5537;
+  border-radius: 5px;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+textarea {
+  background-color: #fbfbfb;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #71dad7;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 400px;
+  width: 97%;
+  margin-top: 10px;
+  font-size: 16px;
+  resize: none;
+
+}

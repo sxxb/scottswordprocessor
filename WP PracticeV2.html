@@ -71,6 +71,20 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+textarea {
+  background-color: #fbfbfb;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #71dad7;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 400px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+
+}
   </style>
 
 </head>
@@ -97,10 +111,9 @@ button:active {
 	</div>
 
 	<div id=TextArea”>
-
-		<div id=“TextBox” contenteditable style=“color:#403e37;margin-top:20px;border-style:solid;border-width:5px;border-color:#71dad7;border-radius:5px;background-color:#fffbfb;padding:5px;width:100%;text-align:left;float:left;color:#403e37;min-height:400px;max-height:400px;overflow-y:scroll>
-
-     		<p id="TextInput"> Start writing! </p<
+    <form>
+		 <textarea>Start Writing!</textarea>
+    </form>
 
     </div>
 </div>

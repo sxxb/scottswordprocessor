@@ -1,0 +1,52 @@
+<!--- PHP Practice
+This needs to do a few things:
+  Save the text area to a db
+  Save the document name to a db
+  Save the date to a db
+  Save the author to a db
+  *NEW* should check saved data vs current data, reset everything to
+    default if it matches, else ask "are you sure?"
+  *SAVE* Should send all the above data to a db - names need not be unique
+  *LOAD* No idea how to make this work - a dialogue box with saved titles?
+  *SOMETHING* will be sorted out later*
+
+--->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trentoscott Word Processor</title>
+
+</head>
+<body>
+
+<div id="everything">
+	<div id=“Title”>
+		<div>
+		    <h2 contenteditable>Author <br></h2><h2> Date Created</h2>
+		</div>
+		<div>
+		    <h1 contenteditable>Document Name</h1>
+		</div>
+
+	</div>
+
+	<div id=“Buttons”>
+		<div>
+    	<button>New</button>
+      <button>Save</button>
+      <button>Load</button>
+      <button>Something</button>
+    </div>
+	</div>
+
+	<div id=TextArea”>
+    <form>
+		 <textarea>Start Writing!</textarea>
+    </form>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>

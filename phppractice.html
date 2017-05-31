@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--- PHP Practice
+This needs to do a few things:
+  Save the text area to a db
+  Save the document name to a db
+  Save the date to a db
+  Save the author to a db
+  *NEW* should check saved data vs current data, reset everything to
+    default if it matches, else ask "are you sure?"
+  *SAVE* Should send all the above data to a db - names need not be unique
+  *LOAD* No idea how to make this work - a dialogue box with saved titles?
+
+--->
+<body>
+<h1> Word Processor Form/PHP Practice </h1> <br>
+<!--- PHP that lets us do some cool things like error boxes if fields are blank etc.
+-->
+<?php
+$documenttitle = $author = $bodytext = "";
+$docerror = $auterror = $boderror = "";
+
+if ($_SERVER["REQUEST_METHOD"] =="POST") {
+/** Title **/
+    if (empty($_POST[documenttitle])) {
+      $docerror = "You have to name your document!";
+    }
+    else   {
+      $documenttitle = test_input($_POST["documenttitle"]);
+    }
+/** Author **/
+   if (empty($_POST[author])) {
+      $auterror = "Put your name to your work!";
+    }
+    else   {
+      $documenttitle = test_input($_POST["author"]);
+    }
+/** TEXT **/
+    if (empty($_POST[bodytext])) {
+      $boderror = "Don't save a blank document, that's just sad";
+    }
+    else   {
+      $bodytext = test_input($_POST["bodytext"]);
+    }
+}
+/** Trim all the backslashes (PHP doesn't like them) and spaces from our input data - I copied this from W3 so make sure you learn it later Scott! **/
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
+Title: <br>
+  <input
+    type="text"
+    name="documenttitle"
+    value="Title"
+    max="30">
+  <span class="error">*<?php echo $docerror;?></span><br>
+Author: <br>
+  <input
+    type="text"
+    name="author"
+    value="Author"
+    max="30">
+  <span class="error">*<?php echo $auterror;?></span><br>
+Text input: <br>
+  <input
+    type="text"
+    name="bodytext"
+    value="Your&nbsp;Text&nbsp;Here"
+    max="65535">
+  <span class="error">*<?php echo $boderror;?></span><br>
+<br>
+<h3> buttons </h3>
+
+<input type="Reset" name="New" value="New"> <br>
+<input type="Submit" name="Save" value="Save"><br>
+Load - tbd
+
+<br>
+<br>
+</form>
+
+<?php
+ echo $documenttitle;
+ echo "<br>";
+ echo $author;
+ echo "<br>";
+ echo $bodytext;
+ echo "<br>";
+ echo "good job Scott B)";
+ ?>
+</body>
+</html>
